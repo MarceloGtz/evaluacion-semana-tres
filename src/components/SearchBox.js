@@ -23,7 +23,7 @@ const SearchBox = ({ setLocation }) => {
             />
 
             <button onClick={searchLocation}>
-                Search
+                Search Location
             </button>
         </div>
     );

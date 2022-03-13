@@ -64,13 +64,14 @@ input[type=text]:focus {
   gap: 1.5rem;
   grid-template-columns: repeat( auto-fill, minmax( min( 100%, 16rem ), 1fr ) );
   margin: 0 1rem;
+  grid-auto-flow: dense;
 }
 
 .CharacterInfo {
   background-color: #191A19;
   border-radius: 2px;
   max-width: 100%;
-  box-shadow: 0 .5rem 1rem rgba(184, 184, 184, 0.15);
+  box-shadow: 0 0 .65rem rgba(83, 161, 55, 0.7);
 }
 
 .CharacterInfo div {
