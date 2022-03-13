@@ -1,38 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  text-decoration: none;
+  background-color: #191A19;
+  color: #f6faf8;
+}
+
 .App {
+  text-align: center;
+  position: relative;
+}
+
+.Hero {
+  height: 100vh;
+  background-image: url(images/Rick-and-Morty-green.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.SearchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.SearchBox input {
+  border-radius: 2px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  width: 45%;
+  padding: .375rem .75rem;
+  border: 1px solid black;
+  transition: all 100ms ease-out;
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type=text]:focus {
+  outline: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.SearchBox button {
+  background-color: white;
+  border: 0;
+  font-weight: bold;
+  outline: 0;
+  padding: .375rem .75rem;
+  border: 1px solid black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.CharacterList {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat( auto-fill, minmax( min( 100%, 16rem ), 1fr ) );
+  margin: 0 1rem;
+}
+
+.CharacterInfo {
+  background-color: #191A19;
+  border-radius: 2px;
+  max-width: 100%;
+  box-shadow: 0 .5rem 1rem rgba(184, 184, 184, 0.15);
+}
+
+.CharacterInfo div {
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.CharacterInfo * {
+  margin: 0.5rem 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.CharacterInfo img {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.LocationInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.LocationInfo__Name {
+  grid-column: span 3;
+}
+
+.status {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(0, 255, 34);
 }
